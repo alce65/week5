@@ -1,22 +1,10 @@
-import { useEffect, useState } from "react";
-import { getAll } from "../../services/api.repo";
-import { CountryStructure } from "../../models/country";
-
+import { useContext } from "react";
 import "./countries.css";
 import { Link } from "react-router-dom";
+import { AppContext } from "../../context/app.context";
 
 export function Countries() {
-  const [countries, setCountries] = useState<CountryStructure[]>([]);
-
-  useEffect(() => {
-    const loadCountries = async () => {
-      const countries = await getAll();
-      console.log(countries);
-      setCountries(countries);
-    };
-
-    loadCountries();
-  }, []);
+  const { countries } = useContext(AppContext);
 
   return (
     <>

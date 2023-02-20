@@ -4,18 +4,18 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { App } from "./components/app/app";
-// import { AppContextProvider } from "./core/context/app.context.provider";
+import { AppContextProvider } from "./context/app.context.provider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    {/* <AppContextProvider> */}
-    <Router>
-      <App />
-    </Router>
-    {/* </AppContextProvider> */}
+    <AppContextProvider>
+      <Router>
+        <App />
+      </Router>
+    </AppContextProvider>
   </React.StrictMode>
 );
 
