@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
-
-// import { App } from "./core/components/app/App";
+import { App } from "./components/app/app";
 // import { AppContextProvider } from "./core/context/app.context.provider";
 
 const root = ReactDOM.createRoot(
@@ -14,8 +13,7 @@ root.render(
   <React.StrictMode>
     {/* <AppContextProvider> */}
     <Router>
-      {/* <App /> */}
-      <></>
+      <App />
     </Router>
     {/* </AppContextProvider> */}
   </React.StrictMode>

@@ -4,15 +4,20 @@ export type CountryStructure = {
   capital: string;
   population: number;
   area: number;
+  isFavorite: boolean;
 };
 
 export type CountryResponse = {
-  name: string;
-  flag: {
+  name: CountryName;
+  flags: {
     svg: string;
   };
-  capital: string;
+  capital: string[];
   population: number;
   area: number;
   independent?: boolean;
+};
+
+type CountryName = {
+  [key: string]: any;
 };
